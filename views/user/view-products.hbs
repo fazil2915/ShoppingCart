@@ -11,8 +11,9 @@
                         <div class="card-body">
                             <h5 class="card-title">{{this.name}}</h5>
                             <p class="card-text">{{this.discription}}</p>
-                            <h3 class="card-text">{{this.price}}</h3>
-                            <a href="/add-to-cart/{{this._id}}" class="btn btn-success">Add to Cart</a>
+                           <h4 class="card-text">Rs:{{this.price}}</h4>
+                            
+                            <button onclick="addToCart('{{this._id}}')" class="btn btn-success">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -21,5 +22,7 @@
             </div>
         </div>
     </section>
-
+<script>
+   
+</script>
    
