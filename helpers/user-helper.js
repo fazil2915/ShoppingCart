@@ -131,7 +131,7 @@ module.exports = {
                         }
                     ).then((response) => {
 
-                        resolve({ removeProduct: true })
+                        resolve({ status:true })
                     })
             } else {
                 db.get().collection(collection.CART_COLLECTION)
@@ -144,22 +144,8 @@ module.exports = {
             }
         })
     },
-    removeProduct: (details) => {
-        return new Promise((resolve, reject) => {
-            db.get().collection(collection.CART_COLLECTION)
-                .updateOne({ _id: ObjectID(details.cart) },
-                    {
-                        $pull: { products: { item: ObjectID(details.product) } }
-                    }
-                ).then((response) => {
-
-                    resolve({ removeProduct: true })
-                })
-        })
-    },
+   
  getTotalAmount: (userId)=>{
-        
-        
     return new Promise(async (resolve, reject) => {
         let total = await db.get().collection(collection.CART_COLLECTION).aggregate([
             {
@@ -195,5 +181,18 @@ module.exports = {
          console.log(total);
         resolve(total[0].total)
     })
- }
+ },
+  removeProduct: (details) => {
+    return new Promise((resolve, reject) => {
+        db.get().collection(collection.CART_COLLECTION)
+            .updateOne({ _id: ObjectID(details.cart) },
+                {
+                    $pull: { products: { item: ObjectID(details.product) } }
+                }
+            ).then((response) => {
+
+                resolve({ removeProduct: true })
+            })
+    })
+},
 }

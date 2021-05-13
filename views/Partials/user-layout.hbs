@@ -34,8 +34,11 @@
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     
      {{#if user}}
-          <a class="dropdown-item" href="/logout">Logout</a>
+        
+           <a class="dropdown-item" href="/profile">Profile</a>
+           <a class="dropdown-item" href="/logout">Logout</a>
           {{else}}
+             
             <a class="dropdown-item" href="/login">Login</a>
       {{/if}}
    
