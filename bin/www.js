@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
+// Module dependencies
 
 var app = require('../app');
 var debug = require('debug')('shoppingcart:server');
@@ -12,12 +10,11 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
 
-/**
- * Create HTTP server.
- */
+// Create HTTP server.
+ 
 
 var server = http.createServer(app);
 
@@ -25,7 +22,9 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port,()=>{
+  console.log("port connected");
+});
 server.on('error', onError);
 server.on('listening', onListening);
 

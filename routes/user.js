@@ -59,11 +59,10 @@ router.post('/login',(req,res)=>{
     }
   })
 })
-router.get('/profile',verifyLogin,(req,res)=>{
-  
+router.get('/profile/session',(req,res,next)=>{
  
-  res.render('user/profile',req.session.user)
-})
+ res.render('user/profile/session',{user:req.session.user})
+});
 router.get('/logout',(req,res)=>{
   req.session.destroy()
   res.redirect('/')

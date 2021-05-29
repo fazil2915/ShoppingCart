@@ -4,9 +4,9 @@
     <h3 class="text-center">Login to your Account</h3>
 <form style="margin-left: 20em;" action="/login" method="POST">
   
-  {{#if loginErr}}
+  }{{#if loginErr}}
   <p class="error">{{loginErr}}</p>
-  {{/if}}
+  {{/if}
   <div class="form-group" >
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" name="Email" style="width: 25em;" placeholder="Enter email">
