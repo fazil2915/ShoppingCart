@@ -1,6 +1,6 @@
  <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/">Shopping Cart</a>
+        <nav class="navbar navbar-expand-lg navbar-li bg-info">
+            <a class="navbar-brand text-light" href="/">Shopping Cart</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -9,17 +9,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Products<span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-light" href="/">Products<span class="sr-only">(current)</span></a>
                     </li>
                     {{#if user}}
                     <li class="nav-item">
-                        <a class="nav-link" href="cart/">Cart<span class="badge badge-warning"  id="cart-count">{{cartCount}}</span></a>
+                        <a class="nav-link text-light" href="cart/">Cart<span class="badge badge-warning"  id="cart-count">{{cartCount}}</span></a>
                     </li>
                     {{/if}}
                         
                         
                      <li class="nav-item">
-                        <a class="nav-link" href="#">My orders</a>
+                        <a class="nav-link text-light" href="#">My orders</a>
                     </li>
                 </ul>
                <div class="dropdown">
