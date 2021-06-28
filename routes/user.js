@@ -59,9 +59,9 @@ router.post('/login',(req,res)=>{
     }
   })
 })
-router.get('/profile/session',(req,res,next)=>{
- 
- res.render('user/profile/session',{user:req.session.user})
+router.get('/profile',(req,res)=>{
+ console.log("hey");
+ res.render('user/profile',{user:req.session.user})
 });
 router.get('/logout',(req,res)=>{
   req.session.destroy()
